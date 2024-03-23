@@ -8,10 +8,16 @@ int main()
     ll n,t;
     cin >> n >> t;
     vector<ll>v(n,0);
+    vector<ll>vvv;
     rep(i,t){
         ll a,b;
         cin >> a >> b;
-        v[a]+=b;
-        
+        v[a-1]+=b;
+        unordered_set<ll>vv(v.begin(),v.end());
+        vvv.push_back(vv.size());
+    }
+
+    rep(i,vvv.size()){
+        cout << vvv[i] << endl;
     }
 }
